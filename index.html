@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Survey form</title>
+  </head>
+
+  <body>
+    <main>
+      <h1 id="title">Оформлення кредиту</h1>
+      <p id="description">Оформлення заявки</p>
+      <form id="survey-form">
+        <label id="name-label" for="name">*Введіть ваше ім'я</label>
+        <input
+          type="text"
+          placeholder="Ваше ім'я"
+          id="name"
+          name="name"
+          required
+        />
+
+        <label id="email-label" for="email"
+          >*Введіть вашу електронну пошту</label
+        >
+        <input
+          type="email"
+          placeholder="Ваше електронна пошта"
+          id="email"
+          name="email"
+          required
+        />
+
+        <label id="number-label" for="number">*Введіть ваш ІПН</label>
+        <input
+          type="number"
+          placeholder="ІПН"
+          id="number"
+          min="000000000000"
+          max="999999999999"
+          name="number"
+        />
+
+        <label id="sum-label" for="sum">*Введіть бажану суму кредиту</label>
+        <input
+          type="number"
+          placeholder="Введіть бажану суму кредиту"
+          id="number"
+          min="0.00"
+          step="100"
+          name="sum"
+          required
+        />
+
+        <label id="dropdown" name="number" for="redit-type"
+          >Оберить тип кредиту</label
+        >
+        <select id="dropdown" name="credit-type">
+          <option value="Споживацький">Споживацький</option>
+          <option value="Іпотека">Іпотека</option>
+          <option value="Авто">Авто</option>
+          <option value="Авто">Нецільовий кредит</option>
+        </select>
+
+        <fieldset>
+          <legend>Пояснення до нецільового кредиту</legend>
+          <div>
+            <input type="checkbox" name="explanation" value="land" />
+            <label for="land">Покупка земельної ділянки</label>
+          </div>
+          <div>
+            <input type="checkbox" name="explanation" value="repairment" />
+            <label for="repairment">Ремонт</label>
+          </div>
+          <div>
+            <input type="checkbox" name="explanation" value="education" />
+            <label for="education">Освіта</label>
+          </div>
+          <div>
+            <input type="checkbox" name="explanation" value="medical" />
+            <label for="medical">Лікування</label>
+          </div>
+        </fieldset>
+        <label id="last-name-change"> Чи змінювали фамілію?</label>
+        <label for="last-name-change-true">Так</label>
+        <input
+          type="radio"
+          name="last-name-change"
+          value="true"
+          id="last-name-change-true"
+        />
+        <label for="last-name-change-false">Ні</label>
+        <input
+          type="radio"
+          name="last-name-change"
+          value="false"
+          id="last-name-change-false"
+        />
+
+        <textarea
+          rows="10"
+          cols="45"
+          name="text"
+          placeholder="Введіть додаткову інформацію"
+        ></textarea>
+        <div class="button-wrapper">
+          <button id="submit" type="submit">Відправити заявку на кредит</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="test.js"></script>
+  </body>
+</html>
